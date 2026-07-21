@@ -92,10 +92,12 @@
     }
 
     .hero-content {
-      display: grid;
-      grid-template-columns: 1fr 180px;
+      max-width: 830px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 70px;
+      text-align: center;
     }
 
     .eyebrow,
@@ -109,10 +111,10 @@
     }
 
     h1 {
-      margin: 12px 0 20px;
-      font-size: clamp(52px, 7vw, 88px);
-      line-height: 0.98;
-      letter-spacing: -3px;
+      margin: 24px 0 14px;
+      font-size: clamp(46px, 6vw, 70px);
+      line-height: 1;
+      letter-spacing: -2px;
     }
 
     h2 {
@@ -138,20 +140,21 @@
     }
 
     .institution {
-      margin: 3px 0 25px;
+      margin: 3px 0 10px;
       color: var(--navy);
       font-size: 19px;
     }
 
-    .intro {
-      max-width: 760px;
-      color: #394752;
-      font-size: 18px;
+    .hero-affiliation {
+      margin: 0;
+      color: #46545f;
+      font-size: 16px;
     }
 
     .photo {
-      width: 170px;
+      width: 220px;
       aspect-ratio: 4 / 5;
+      margin-top: 30px;
       padding: 6px;
       background: white;
       border: 1px solid var(--border);
@@ -164,6 +167,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center 35%;
     }
 
     .photo-placeholder {
@@ -181,6 +185,7 @@
 
     .buttons {
       display: flex;
+      justify-content: center;
       gap: 14px;
       flex-wrap: wrap;
       margin-top: 28px;
@@ -212,6 +217,7 @@
 
     .profile-links {
       display: flex;
+      justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
       margin-top: 24px;
@@ -580,14 +586,12 @@
         padding: 18px 0;
       }
 
-      .hero-content,
       .funding-content {
         grid-template-columns: 1fr;
       }
 
       .photo {
-        order: -1;
-        width: 150px;
+        width: 185px;
       }
 
       .highlight-grid {
@@ -630,8 +634,8 @@
       }
 
       h1 {
-        font-size: 49px;
-        letter-spacing: -2px;
+        font-size: 44px;
+        letter-spacing: -1.5px;
       }
 
       .hero {
@@ -700,7 +704,7 @@
 
   <header>
     <div class="container navbar">
-      <a class="brand" href="#home">Nathalie El-Bazzal</a>
+      <a class="brand" href="#home">N. El-Bazzal</a>
       <nav aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#research">Research</a>
@@ -718,33 +722,29 @@
 
     <section class="hero" id="home">
       <div class="container hero-content">
-        <div>
-          <div class="eyebrow">Economics · International Trade · Geoeconomics</div>
-
-          <h1>Nathalie<br>El-Bazzal</h1>
-
-          <p class="position">PhD Candidate in Economics</p>
-          <p class="institution">Université Paris 8</p>
-
-          <p class="intro">
-            Research Affiliate at the Paris School of Economics through the CEPR ReCIPE
-            research project hosted at PSE. My research examines how conflict, sanctions,
-            geopolitical fragmentation, and disruptions to maritime trade reshape
-            international trade, market integration, and global value chains.
-          </p>
-
-          <div class="buttons">
-            <a class="button primary" href="#research">View my research</a>
-            <a class="button secondary" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
-          </div>
-
-          <div class="profile-links">
-            <a href="mailto:nathalie.elbazzal@psemail.eu">Email</a>
-          </div>
-        </div>
+        <div class="eyebrow">International Trade · Geoeconomics · Geopolitical Risk</div>
 
         <div class="photo">
           <img src="photo.jpg" alt="Portrait of Nathalie El-Bazzal">
+        </div>
+
+        <h1>Nathalie El-Bazzal</h1>
+
+        <p class="position">PhD Candidate in Economics</p>
+        <p class="institution">Université Paris 8</p>
+
+        <p class="hero-affiliation">
+          Research Affiliate, Paris School of Economics<br>
+          through the CEPR ReCIPE research project hosted at PSE
+        </p>
+
+        <div class="buttons">
+          <a class="button primary" href="#research">View my research</a>
+          <a class="button secondary" href="cv.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+
+        <div class="profile-links">
+          <a href="mailto:nathalie.elbazzal@psemail.eu">Email</a>
         </div>
       </div>
     </section>
@@ -783,19 +783,20 @@
     <section id="about">
       <div class="container about">
         <div class="section-label">About</div>
-        <h2>Research at the intersection of economics and geopolitics</h2>
+        <h2>Hello!</h2>
 
         <p>
-          I am a PhD Candidate in Economics at Université Paris 8. My research interests
-          include international trade, geoeconomics, political economy, geopolitical risk,
-          conflict economics, and maritime trade.
+          Hello! I am a PhD Candidate in Economics at Université Paris 8 and a Research Affiliate
+          at the Paris School of Economics through the CEPR ReCIPE research project hosted at PSE.
+          Before entering academia, I worked across the Middle East, where I witnessed how conflict,
+          sanctions, and political instability reshape economies and international trade.
         </p>
 
         <p>
-          My doctoral research, <em>Trade Shocks and Geoeconomic Fragmentation</em>,
-          studies how geopolitical shocks and institutional fragmentation affect shipping
-          networks, market outcomes, and sourcing strategies. My work combines applied
-          econometrics with large-scale trade, maritime, price, and conflict datasets.
+          That experience naturally led me to research the intersection of international trade,
+          geoeconomics, and geopolitical risk. Today, my work explores how geopolitical shocks
+          reshape trade through different transmission channels, with a particular focus on
+          maritime trade, market integration, and global value chains.
         </p>
       </div>
     </section>
@@ -1089,8 +1090,8 @@
 
           <div class="conference-items">
             <article class="conference-item">
-              <h3>World Trade Dialogue</h3>
-              <p>Kiel Institute for the World Economy, Germany · April 2026</p>
+              <h3>Sardinian Empirical Trade Conference</h3>
+              <p>FREIT · Alghero, Italy · 14–15 September 2026</p>
             </article>
 
             <article class="conference-item">
@@ -1099,8 +1100,8 @@
             </article>
 
             <article class="conference-item">
-              <h3>Sardinian Empirical Trade Conference</h3>
-              <p>FREIT · Alghero, Italy · 14–15 September 2026</p>
+              <h3>World Trade Dialogue</h3>
+              <p>Kiel Institute for the World Economy, Germany · April 2026</p>
             </article>
           </div>
         </div>
